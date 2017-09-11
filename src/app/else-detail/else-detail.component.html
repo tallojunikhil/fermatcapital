@@ -1,0 +1,98 @@
+<h1>{{title}}</h1>
+<!--<<<<<<< HEAD-->
+
+
+<!--<div class="container">-->
+
+  <!--<div class="row">-->
+  <!--<div class="col-md-4">-->
+    <!--<label class="lead labelSize"> PortfolioCode : </label>-->
+    <!--<select class="lead labelSize " [(ngModel)]="selectedPortfoliocodes.pfcode" (change)="onSelect($event.target.value)">-->
+<!--=======-->
+<!--<br>-->
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-3">
+    <label class="lead labelSize"> PortfolioCode </label>
+    <select class="lead labelSize " [(ngModel)]="selectedPortfoliocodes.name"
+            (change)="onSelect($event.target.value)">
+      <option value="" selected>--Select--</option>
+      <option *ngFor="let pf of portfoliocodes" value={{pf.value}}>{{pf.name}}</option>
+    </select>
+
+    <label class="lead labelSize"> PortfolioDate </label>
+    <select class="lead labelSize " (change)="selectedPortfoliocodes.name">
+      <option value="" selected>--Select--</option>
+      <option *ngFor="let d of portfolioDates" value="{{d.name}}">{{d.value | date:'MM/dd/yy'}}</option>
+    </select>
+    <label class="lead labelSize"> PerilCode</label>
+    <select class="lead labelSize ">
+      <option value="">--Select--</option>
+      <option *ngFor="let p of perils" value="{{p.value}}">{{p.name}}</option>
+    </select>
+
+  <!--</div>-->
+    <!--<div class="row">-->
+      <!--<label class="lead labelSize" style="float: left"> PortfolioDate : </label>-->
+      <!--<div class="input-group  labelSize col-xs-5" >-->
+        <!--<my-date-picker [options]="myDatePickerOptions"-->
+                        <!--(dateChanged)="onDateChanged($event)"></my-date-picker></div>-->
+      <!--<select class="lead labelSize " [(ngModel)]="selectedPortfoliocodes.pfdate"(change)="onSelect($event.target.value)">-->
+        <!--<option value="">&#45;&#45;Select&#45;&#45;</option>-->
+        <!--<option *ngFor="let pf of portfoliocodes" value={{pf.pfdate}}> {{pf.pfdate}} </option>-->
+      <!--</select>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<label class="lead labelSize"> PerilCode : </label>-->
+      <!--<select class="lead labelSize " [(ngModel)]="selectedPeril.pcodename"(change)="onSelect($event.target.value)">-->
+        <!--<option value="">&#45;&#45;Select&#45;&#45;</option>-->
+        <!--<option *ngFor="let p of perils" value="{{p.pcodename}}">{{p.pcodename}}</option>-->
+      <!--</select>-->
+    <!--</div>-->
+
+    <!--<div class="row">-->
+      <!--<label class="lead labelSize"> SortColumn : </label>-->
+      <!--<select class="lead labelSize "  (change)="onSelect($event.target.value)">-->
+        <!--<option value="">&#45;&#45;Select&#45;&#45;</option>-->
+        <!--<option value="FCMCode">FCMCode</option>-->
+        <!--<option value="Size($)">Size($)</option>-->
+        <!--<option value="OnRiskFactor">OnRiskFactor</option>-->
+        <!--<option value="PerilExposureFactor">PerilExposureFactor</option>-->
+        <!--<option value="DeadPerilFactor">DeadPerilFactor</option>-->
+        <!--<option value="StructureFactor">StructureFactor</option>-->
+        <!--<option value="FirstEventExposure($)">FirstEventExposure($)</option>-->
+      <!--</select>-->
+    <!--</div>-->
+    </div>
+  <div class="col-md-9">
+    <!--<app-my-grid-application></app-my-grid-application>-->
+<!--=======-->
+  <!--</div>-->
+
+
+  <!--<div class="row">-->
+
+    <ag-grid-angular #agGrid style="width: 500px; height: 200px;font-size: 10px;" class="ag-fresh"
+                     [gridOptions]="gridOptions">
+    </ag-grid-angular>
+
+  </div>
+  </div>
+</div>
+
+
+<!---->
+<!--<div class="row">-->
+<!--<label class="lead labelSize"> SortColumn : </label>-->
+<!--<select class="lead labelSize " (change)="onSelect($event.target.value)">-->
+<!--<option value="">&#45;&#45;Select&#45;&#45;</option>-->
+<!--<option value="FCMCode">FCMCode</option>-->
+<!--<option value="Size($)">Size($)</option>-->
+<!--<option value="OnRiskFactor">OnRiskFactor</option>-->
+<!--<option value="PerilExposureFactor">PerilExposureFactor</option>-->
+<!--<option value="DeadPerilFactor">DeadPerilFactor</option>-->
+<!--<option value="StructureFactor">StructureFactor</option>-->
+<!--<option value="FirstEventExposure($)">FirstEventExposure($)</option>-->
+<!--</select>-->
+<!--</div>-->

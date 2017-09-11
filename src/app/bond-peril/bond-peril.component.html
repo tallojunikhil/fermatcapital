@@ -1,0 +1,61 @@
+<h1>{{title}}</h1>
+
+<div class="container">
+
+  <div class="row">
+  <div class="col-md-3">
+
+    <label class="lead labelSize"> Select a Peril  </label>
+    <select class="lead  labelSize" [(ngModel)]="selectedPeril.name" (change)="onSelect($event.target.value)">
+      <!--<option selected>&#45;&#45;Select&#45;&#45;</option>-->
+      <option selected value=""> --Select--</option>
+      <option *ngFor="let p of perils" value={{p.name}}> {{p.value}}</option>
+    </select>
+    <br>
+  <!--</div>-->
+  <!--<br>-->
+
+  <!--<div class="row alignment">-->
+    <label class="lead labelSize"> Select a Bond  </label>
+    <select class="lead labelSize">
+      <option *ngIf="selectedPeril.pcode == ''" value=""> --Select--</option>
+      <option selected value=""> --Select--</option>
+      <option *ngFor="let b of bonds" value={{b.value}}> {{b.name}}</option>
+    </select>
+  <!--</div>-->
+<!--<br>-->
+  <!--<div class="row alignment">-->
+    <!--<div class="btn-group">-->
+      <!--<button type="button" class="btn btn-primary labelSize" (click)="onEvaluate()"><strong> Evaluate </strong></button>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--<br>-->
+  <!--<br>-->
+  </div>
+
+<!--<<<<<<< HEAD-->
+
+  <!--<div class="row alignment">-->
+    <div class="col-md-9">
+    <!--<app-my-grid-application></app-my-grid-application>-->
+  <!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--=======-->
+  <!--<div class="row">-->
+    <!--<div class="btn-group">-->
+      <!--<button type="button" class="btn btn-primary labelSize" (click)="onEvaluate()"><strong> Evaluate </strong></button>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<div class="clearfix"></div>-->
+<!--<br>-->
+
+  <!--<div class="row">-->
+    <ag-grid-angular #agGrid style="width: 315px; height: 360px; font-size: 10px!important;" class="ag-fresh"
+                     [gridOptions]="gridOptions">
+    </ag-grid-angular>
+  </div>
+</div>
+</div>
+

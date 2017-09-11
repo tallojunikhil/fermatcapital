@@ -1,0 +1,142 @@
+<h1>{{title}}</h1>
+
+
+<div class="container">
+
+
+<!--<<<<<<< HEAD-->
+    <div class="row">
+      <div class="col-md-3">
+      <label class="lead labelSize"> Model</label>
+      <select class="lead labelSize "  (change)="onSelect($event.target.value)">
+        <option value="">--Select--</option>
+        <option value="fcm">fcm</option>
+        <option value="eqe">eqe</option>
+        <option value="nied1">nied1</option>
+        <option value="nied2">nied2</option>
+        <option value="rms">rms</option>
+      </select>
+    <!--</div>-->
+
+    <!--<div class="row">-->
+      <label class="lead labelSize"> Station Number</label>
+      <select class="lead labelSize "  (change)="onSelect($event.target.value)">
+        <option value="">--Select--</option>
+        <option value="10000">100000</option>
+      </select>
+    <!--</div>-->
+
+    <!--<div class="row">-->
+      <label class="lead labelSize"> Loss Type </label>
+      <select class="lead labelSize "  (change)="onSelect($event.target.value)">
+        <option value="">--Select--</option>
+        <option value="occ">occ</option>
+      </select>
+    <!--</div>-->
+    <!--<div class="row">-->
+      <label class="lead labelSize"> EP%-Points </label>
+      <select class="lead labelSize "  (change)="onSelect($event.target.value)">
+        <option value="">--Select--</option>
+        <option value=".1">.1</option>
+        <option value=".5">.5</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+      </select>
+<!--=======-->
+  <!--<div class="row">-->
+    <!--<label class="lead labelSize"> Model </label>-->
+    <!--<select class="lead labelSize " (change)="onSelect($event.target.value)">-->
+      <!--<option value="">&#45;&#45;Select&#45;&#45;</option>-->
+      <!--<option value="fcm">fcm</option>-->
+      <!--<option value="eqe">eqe</option>-->
+      <!--<option value="nied1">nied1</option>-->
+      <!--<option value="nied2">nied2</option>-->
+      <!--<option value="rms">rms</option>-->
+    <!--</select>-->
+  <!--</div>-->
+
+  <!--<div class="row">-->
+    <!--<label class="lead labelSize"> Station Number</label>-->
+    <!--<select class="lead labelSize " (change)="onSelect($event.target.value)">-->
+      <!--<option value="">&#45;&#45;Select&#45;&#45;</option>-->
+      <!--<option value="10000">100000</option>-->
+    <!--</select>-->
+  <!--</div>-->
+
+  <!--<div class="row">-->
+    <!--<label class="lead labelSize"> Loss Type</label>-->
+    <!--<select class="lead labelSize " (change)="onSelect($event.target.value)">-->
+      <!--<option value="">&#45;&#45;Select&#45;&#45;</option>-->
+      <!--<option value="occ">occ</option>-->
+    <!--</select>-->
+  <!--</div>-->
+  <!--<div class="row">-->
+    <!--<label class="lead labelSize"> EP%-Points </label>-->
+    <!--<select class="lead labelSize ">-->
+      <!--<option value="">&#45;&#45;Select&#45;&#45;</option>-->
+      <!--<option *ngFor="let _ep of epp" value={{_ep.value}}>{{_ep.name}}</option>-->
+<!--&gt;>>>>>> origin/sid-->
+
+    <!--</select>-->
+
+<!--<<<<<<< HEAD-->
+    <!--</div>-->
+
+    <!--<div class="row">-->
+      <!--<label class="lead labelSize"> Shindo Index </label>-->
+      <!--<select class="lead labelSize "  (change)="onSelect($event.target.value)">-->
+        <!--<option value="">&#45;&#45;Select&#45;&#45;</option>-->
+        <!--<option value="3.">3.</option>-->
+        <!--<option value="3.5">3.5</option>-->
+        <!--<option value="4.">4.</option>-->
+        <!--<option value="4.5">4.5</option>-->
+        <!--<option value="5.">5.</option>-->
+        <!--<option value="5.">5.5</option>-->
+        <!--<option value="6.">6.</option>-->
+        <!--<option value="6.5">6.5</option>-->
+        <!--<option value="7.">7.</option>-->
+<!--&lt;!&ndash;=======&ndash;&gt;-->
+
+
+
+    <label class="lead labelSize"> Shindo Index </label>
+    <select class="lead labelSize " (change)="onSelect($event.target.value)">
+      <option value="">--Select--</option>
+      <option value="3.">3.</option>
+      <option value="3.5">3.5</option>
+      <option value="4.">4.</option>
+      <option value="4.5">4.5</option>
+      <option value="5.">5.</option>
+      <option value="5.">5.5</option>
+      <option value="6.">6.</option>
+      <option value="6.5">6.5</option>
+      <option value="7.">7.</option>
+
+    </select>
+      </div>
+
+
+  <div class="col-md-9">
+    <ag-grid-angular #agGrid style="width: 385px; height: 308px;font-size: 10px!important;" class="ag-fresh"
+                     [gridOptions]="gridOptions">
+    </ag-grid-angular>
+  <!--</div>-->
+
+<!--<<<<<<< HEAD-->
+  <!--<div class="col-md-8">-->
+    <!--<app-my-grid-application></app-my-grid-application>-->
+  <!--</div>-->
+</div>
+</div>
+</div>
+
+  <!--<div class="row">-->
+    <!--<ag-grid-angular #agGrid style="width: 600px; height: 300px;" class="ag-fresh"-->
+                     <!--[gridOptions]="gridOptions1">-->
+    <!--</ag-grid-angular>-->
+  <!--</div>-->
+
+<!--&gt;>>>>>> origin/sid-->

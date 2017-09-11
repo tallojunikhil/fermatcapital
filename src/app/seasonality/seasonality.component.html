@@ -1,0 +1,66 @@
+<h1>{{title}}</h1>
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-3">
+    <label class="lead labelSize"> Bond Code </label>
+    <select class="lead  labelSize">
+      <option selected value="">--Select--</option>
+      <option *ngFor="let _bc of bonds" value="{{_bc.value}}"> {{_bc.name}}</option>
+    </select>
+  <!--</div>-->
+
+  <!--<div class="row">-->
+    <label class="lead labelSize">ZeroedPerilCode </label>
+    <select class="lead  labelSize">
+      <option selected value="">--Select--</option>
+      <option value="0.1">0.1</option>
+      <option value="0.2">0.2</option>
+      <option value="0.5">0.5</option>
+      <option value="1">1</option>
+
+    </select>
+  <!--</div>-->
+
+
+  <div id="sandbox-container">
+    <label class="lead labelSize " style="float:left; line-height: 40px;">StartDate </label>
+    <div class=" input-group col-xs-6">
+      <my-date-picker [options]="myDatePickerOptions" placeholder="mm/dd/yyyy" value=""
+                      (dateChanged)="onDateChanged($event)"></my-date-picker>
+    </div>
+  </div>
+<!--<<<<<<< HEAD-->
+<!--<hr>-->
+    <!--<label class="text-info"> Date as of </label> <br>-->
+    <!--<label class="text-info"> Bond Code </label> <br>-->
+    <!--<label class="text-info"> Zeroed Peril Codes </label> <br>-->
+    <!--<label class="text-info"> Start Date</label> <br>-->
+    <!--<label class="text-info"> Years Left </label> <br>-->
+    <!--<label class="text-info"> ELFcm (Init) : 18.1</label><br>-->
+    <!--<label class="text-info"> ELFcm / Yr (Adj) : 181 </label> <br>-->
+  <!--</div>-->
+    </div>
+
+  <div class="col-md-9">
+    <!--<app-my-grid-application></app-my-grid-application>-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+  <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+    <!--<app-my-grid-application></app-my-grid-application>-->
+<!--=======-->
+
+
+  <!--<div class="row">-->
+
+    <ag-grid-angular #agGrid style="width: 460px; height: 208px; font-size: 10px!important;" class="ag-fresh"
+                     [gridOptions]="gridOptions">
+    </ag-grid-angular>
+<!--&gt;>>>>>> origin/sid-->
+  </div>
+
+</div>
+</div>
+
+

@@ -1,0 +1,97 @@
+
+<h1>{{title}}</h1>
+
+
+<div class="container">
+<!--<<<<<<< HEAD-->
+
+  <div class="row">
+    <div class="col-md-3">
+    <label class="lead labelSize"> Peril</label>
+   <!--<div class="row">-->
+    <!--<label class="lead labelSize"> Peril </label>-->
+<!--&gt;>>>>>> origin/sid-->
+    <select class="lead  labelSize">
+      <option selected value="">--Select--</option>
+      <option *ngFor="let p of perils" value={{p.value}}>{{p.name}}</option>
+    </select>
+  <!--</div>-->
+
+  <!--<div class="row">-->
+    <label class="lead labelSize"> Region</label>
+    <select class="lead  labelSize" >
+      <option selected value="">--Select--</option>
+      <option *ngFor="let s of region" value={{s.name}}>{{s.value}}</option>
+    </select>
+  <!--</div>-->
+
+  <!--<div class="row">-->
+    <label class="lead labelSize"> LOB</label>
+    <select class="lead  labelSize">
+      <option selected value="">--Select--</option>
+      <option *ngFor="let l of lob" value={{l.value}}>{{l.name}}</option>
+    </select>
+  <!--</div>-->
+
+  <!--<div class="row">-->
+    <label class="lead labelSize"> RMS </label>
+    <select class="lead  labelSize">
+      <option selected value="">--Select--</option>
+      <option *ngFor="let r of rms" value={{r.value}}>{{r.name}}</option>
+
+    </select>
+  <!--</div>-->
+
+  <!--<div class="row">-->
+    <label class="lead labelSize"> EQE </label>
+    <select class="lead  labelSize">
+      <option selected value="">--Select--</option>
+      <option *ngFor="let e of ege" value={{e.value}}>{{e.name}}</option>
+    </select>
+  <!--</div>-->
+
+  <!--<div class="row">-->
+    <label class="lead labelSize"> AggOcc</label>
+    <select class="lead  labelSize">
+      <option selected value="">--Select--</option>
+      <option *ngFor="let a of aggocc" value={{a.value}}>{{a.name}}</option>
+    </select>
+  <!--</div>-->
+
+  <!--<div class="row">-->
+    <label class="lead labelSize"> EP% - Points</label>
+    <select class="lead  labelSize" name="ep" >
+      <option selected value="">--Select--</option>
+      <option *ngFor="let _ep of epp" value={{_ep.value}}>{{_ep.name}}</option>
+
+    </select>
+  <!--</div>-->
+
+  <!--<div class="row">-->
+    <label class="lead labelSize"> LossPoints(B)</label>
+    <select class="lead  labelSize" name="lp">
+      <option selected value="">--Select--</option>
+      <option *ngFor="let _ep of lpp" value={{_ep.value}}>{{_ep.name}}</option>
+    </select>
+
+  </div>
+
+  <div class="col-md-9">
+
+  <!--</div>-->
+
+  <!--<div class="row">-->
+
+    <ag-grid-angular #agGrid style="width: 250px; height: 220px;font-size:10px;" class="ag-fresh"
+                     [gridOptions]="gridOptions">
+    </ag-grid-angular>
+
+  <!--</div>-->
+  <!--<div class="row">-->
+    <ag-grid-angular #agGrid style="width: 250px; height: 180px;font-size:10px;" class="ag-fresh"
+                     [gridOptions]="gridOptions1">
+    </ag-grid-angular>
+  </div>
+
+</div>
+</div>

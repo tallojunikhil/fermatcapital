@@ -1,0 +1,86 @@
+<h1>{{title}}</h1>
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-3">
+    <label class="lead labelSize"> Abbrev </label>
+    <select class="lead labelSize " [(ngModel)]="selectedPortfoliocodes.name"
+            (change)="onSelect($event.target.value)">
+      <option value="" selected>--Select--</option>
+      <option *ngFor="let pf of portfoliocodes" value={{pf.value}}>{{pf.name}}</option>
+    </select>
+      <!--</div>-->
+  <!--<div class="row">-->
+    <!--<label class="lead labelSize"> Date </label>-->
+    <!--<select class="lead  labelSize">-->
+        <!--<option selected value="">&#45;&#45;Select&#45;&#45;</option>-->
+        <!--<option *ngFor="let _dates of dates" value="{{_dates.value.getMonth() + '/' + _dates.value.getDate()+'/'+_dates.value.getFullYear()}}">-->
+          <!--{{_dates.value.getMonth() + '/' + _dates.value.getDate()+'/'+_dates.value.getFullYear()}}-->
+        <!--</option>-->
+    <!--</select>-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+  <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+    <!--<label class="lead labelSize"> Peril Code </label>-->
+    <!--<select class="lead  labelSize">-->
+      <!--<option selected value="">&#45;&#45;Select&#45;&#45;</option>-->
+      <!--<option *ngFor="let _pcodes of pcodes" value="{{_pcodes.value}}">{{_pcodes.name}}</option>-->
+    <!--</select>-->
+  <!--</div>-->
+  <!--<div class="row">-->
+    <!--<label class="lead labelSize"> Sort Column </label>-->
+
+
+  <!--<div class="row">-->
+
+    <label class="lead labelSize"> Date </label>
+    <select class="lead labelSize " (change)="selectedPortfoliocodes.name">
+      <option value="" selected>--Select--</option>
+      <option *ngFor="let pd of portfolioDates" value="{{pd.name}}">{{pd.value | date:'MM/dd/yy'}}</option>
+    </select>
+
+  <!--</div>-->
+  <!--<div class="row">-->
+    <label class="lead labelSize"> Peril </label>
+<!--&gt;>>>>>> origin/sid-->
+    <select class="lead  labelSize">
+      <option selected value="">--Select--</option>
+      <option *ngFor="let p of perils" value={{p.value}}>{{p.name}}</option>
+    </select>
+  </div>
+
+<!--<<<<<<< HEAD-->
+  <div class="col-md-9">
+    <!--<app-my-grid-application></app-my-grid-application>-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+  <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+    <!--<app-my-grid-application></app-my-grid-application>-->
+  <!--</div>-->
+
+<!--</div>-->
+<!--</div>-->
+<!--=======-->
+
+  <!--<div class="row">-->
+    <ag-grid-angular #agGrid style="width: 600px; height: 180px;font-size: 10px;" class="ag-fresh"
+                     [gridOptions]="gridOptions">
+    </ag-grid-angular>
+  </div>
+
+</div>
+</div>
+
+<!--<div class="row">-->
+<!--<label class="lead labelSize"> Sort Column </label>-->
+<!--<select class="lead  labelSize">-->
+<!--<option selected value="">&#45;&#45;Select&#45;&#45;</option>-->
+<!--<option value="fcmcode">FCM Code</option>-->
+<!--<option value="size">Size ($)</option>-->
+<!--<option value="onriskfactor">On Risk Factor</option>-->
+<!--<option value="perilexposure">Peril Exposure Factor</option>-->
+<!--<option value="deadperil">Dead Peril Factor</option>-->
+<!--<option value="firstevent">First Event Exposure ($)</option>-->
+<!--</select>-->
+<!--</div>-->
+<!--&gt;>>>>>> origin/sid-->

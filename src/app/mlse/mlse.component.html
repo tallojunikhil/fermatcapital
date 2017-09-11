@@ -1,0 +1,96 @@
+<h1>{{title}}</h1>
+
+
+<div class="container">
+
+<!--<<<<<<< HEAD-->
+    <!--<div class="row">-->
+      <!--<div class="col-md-4">-->
+      <!--<label class="lead labelSize"> Abbrev : </label>-->
+      <!--<select class="lead labelSize "  [(ngModel)]="selectedPortfoliocodes.pfcode" (change)="onSelect($event.target.value)">-->
+        <!--<option value="">&#45;&#45;Select&#45;&#45;</option>-->
+        <!--<option *ngFor="let pf of portfoliocodes" value={{pf.pfcode}}>{{pf.pfcode}} </option>-->
+      <!--</select>-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+      <!--<label class="lead labelSize"> Date : </label>-->
+      <!--<select class="lead labelSize "  [(ngModel)]="selectedPortfoliocodes.pfdate" (change)="onSelect($event.target.value)">-->
+        <!--<option value="">&#45;&#45;Select&#45;&#45;</option>-->
+        <!--<option *ngFor="let pf of portfoliocodes" value={{pf.pfdate}}>{{pf.pfdate}} </option>-->
+      <!--</select>-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+      <!--<label class="lead labelSize"> SortColumn : </label>-->
+      <!--<select class="lead labelSize "  (change)="onSelect($event.target.value)">-->
+        <!--<option value="">&#45;&#45;Select&#45;&#45;</option>-->
+        <!--<option value="MLSE">MLSE</option>-->
+        <!--<option value="PerilCode">PerilCode</option>-->
+      <!--</select>-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+      <!--<label class="lead labelSize"> Units : </label>-->
+      <!--<select class="lead labelSize "  (change)="onSelect($event.target.value)">-->
+        <!--<option value="">&#45;&#45;Select&#45;&#45;</option>-->
+        <!--<option value="%">%</option>-->
+        <!--<option value="$">$</option>-->
+      <!--</select>-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+      <!--<label class="lead labelSize"> IncludeBenefitOfYield:  </label> &nbsp;-->
+      <!--<input type="checkbox" class="labelSize">-->
+    <!--</div>-->
+
+  <!--<div class="col-md-8">-->
+    <!--<app-my-grid-application></app-my-grid-application>-->
+  <!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--=======-->
+  <div class="row">
+    <div class="col-md-3">
+    <label class="lead labelSize"> Abbrev </label>
+    <select class="lead labelSize " [(ngModel)]="selectedPortfoliocodes.name"
+            (change)="onSelect($event.target.value)">
+      <option value="" selected>--Select--</option>
+      <option *ngFor="let pf of portfoliocodes" value={{pf.value}}>{{pf.name}}</option>
+    </select>
+
+
+    <label class="lead labelSize"> Date </label>
+    <select class="lead labelSize " (change)="selectedPortfoliocodes.name">
+      <option value="" selected>--Select--</option>
+      <option *ngFor="let pd of portfolioDates" value="{{pd.name}}">{{pd.value | date:'MM/dd/yy'}}</option>
+    </select>
+
+
+    <label class="lead labelSize"> Units</label>
+    <select class="lead labelSize " (change)="onSelect($event.target.value)">
+      <option value="">--Select--</option>
+      <option value="%">%</option>
+      <option value="$">$</option>
+    </select>
+
+    <label class="lead labelSize"> IncludeBenefitOfYield </label>
+      <input type="checkbox" class="pull-right">
+  </div>
+
+  <div class="col-md-9">
+    <ag-grid-angular #agGrid style="width: 180px; height: 230px; font-size: 10px;" class="ag-fresh"
+                     [gridOptions]="gridOptions">
+    </ag-grid-angular>
+  </div>
+</div>
+</div>
+<!--<div class="row">-->
+<!--<label class="lead labelSize"> SortColumn </label>-->
+<!--<select class="lead labelSize "  (change)="onSelect($event.target.value)">-->
+<!--<option value="">&#45;&#45;Select&#45;&#45;</option>-->
+<!--<option value="MLSE">MLSE</option>-->
+<!--<option value="PerilCode">PerilCode</option>-->
+<!--</select>-->
+<!--</div>-->
+<!--&gt;>>>>>> origin/sid-->

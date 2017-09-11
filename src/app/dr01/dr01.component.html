@@ -1,0 +1,78 @@
+ <h1>{{title}}</h1>
+
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-3">
+    <!--<label class="lead labelSize"> Portfolio Code </label>-->
+    <!--<select class="lead  labelSize" [(ngModel)]="selectedPortfolio.portfolioCode" >-->
+      <!--<option selected value="">&#45;&#45;Select&#45;&#45;</option>-->
+      <!--<option *ngFor="let p of portfolios" value={{p.portfolioCode}}> {{p.portfolioCode}}</option>-->
+    <label class="lead labelSize"> PortfolioCode </label>
+    <select class="lead labelSize " [(ngModel)]="selectedPortfoliocodes.name"
+            (change)="onSelect($event.target.value)">
+      <option value="" selected>--Select--</option>
+      <option *ngFor="let pf of portfoliocodes" value={{pf.value}}>{{pf.name}}</option>
+    </select>
+  <!--</div>-->
+
+  <!--<div class="row">-->
+
+<!--<<<<<<< HEAD-->
+    <!--<label class="lead labelSize"> Portfolio Date</label>-->
+    <!--<select class="lead  labelSize" [(ngModel)]="selectedPortfolio.portfolioDate">-->
+      <!--<option selected value=""> &#45;&#45;Select&#45;&#45;</option>-->
+      <!--<option *ngFor="let p of portfolios" value="{{p.portfolioDate.getMonth() + '/' + p.portfolioDate.getDate()+ '/' + p.portfolioDate.getFullYear()}}">-->
+        <!--{{p.portfolioDate.getMonth() + '/' + p.portfolioDate.getDate()+ '/' + p.portfolioDate.getFullYear()}}-->
+      <!--</option>-->
+<!--=======-->
+    <label class="lead labelSize"> PortfolioDate </label>
+    <select class="lead labelSize " (change)="selectedPortfoliocodes.name">
+      <option value="" selected>--Select--</option>
+      <option *ngFor="let pd of portfolioDates" value="{{pd.name}}">{{pd.value | date:'MM/dd/yy'}}</option>
+    </select>
+  <!--</div>-->
+
+  <!--<div class="row">-->
+    <!--<label class="lead labelSize">Sort Column</label>-->
+    <!--<select class="lead  labelSize">-->
+      <!--<option selected value=""> &#45;&#45;Select&#45;&#45;</option>-->
+      <!--<option value="fcmcode">FCMCode</option>-->
+      <!--<option value="100yr"> 100Yr ($mm)</option>-->
+      <!--<option value="1000yr"> 1000Yr ($mm)</option>-->
+      <!--<option value="100yrp"> 100Yr (%NAV)</option>-->
+      <!--<option value="1000yrp"> 1000Yr (%NAV)</option>-->
+    <!--</select>-->
+  <!--</div>-->
+    </div>
+  <div class="col-md-6">
+    <!--<app-my-grid-application></app-my-grid-application>-->
+<!--=======-->
+  <!--&lt;!&ndash;<label class="lead labelSize">Sort Column</label>&ndash;&gt;-->
+  <!--&lt;!&ndash;<select class="lead  labelSize">&ndash;&gt;-->
+  <!--&lt;!&ndash;<option selected value=""> &#45;&#45;Select&#45;&#45;</option>&ndash;&gt;-->
+  <!--&lt;!&ndash;<option value="fcmcode">FCMCode</option>&ndash;&gt;-->
+  <!--&lt;!&ndash;<option value="100yr"> 100Yr ($mm)</option>&ndash;&gt;-->
+  <!--&lt;!&ndash;<option value="1000yr"> 1000Yr ($mm)</option>&ndash;&gt;-->
+  <!--&lt;!&ndash;<option value="100yrp"> 100Yr (%NAV)</option>&ndash;&gt;-->
+  <!--&lt;!&ndash;<option value="1000yrp"> 1000Yr (%NAV)</option>&ndash;&gt;-->
+  <!--&lt;!&ndash;</select>&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+  <!--<div class="row">-->
+
+
+    <ag-grid-angular #agGrid style=" width: 405px; height: 205px; font-size: 10px;" class="ag-fresh"
+                     [gridOptions]="gridOptions">
+    </ag-grid-angular>
+  </div>
+</div>
+
+</div>
+
+
+<!--<option *ngFor="let p of portfolios" value="{{p.portfolioDate.getMonth() + '/' + p.portfolioDate.getDate()+ '/' + p.portfolioDate.getFullYear()}}">-->
+<!--{{p.portfolioDate.getMonth() + '/' + p.portfolioDate.getDate()+ '/' + p.portfolioDate.getFullYear()}}-->
+<!--</option>-->

@@ -1,0 +1,51 @@
+<h1>{{title}}</h1>
+
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-3">
+    <!--<label class="labelSize lead"> Portfolio Code</label>-->
+    <!--<select class="lead  labelSize">-->
+      <!--<option selected value="">&#45;&#45;Select</option>-->
+      <!--<option *ngFor="let _pcodes of pcodes"  value="{{_pcodes.value}}"> {{_pcodes.name}}</option>-->
+<!--=======-->
+    <label class="lead labelSize"> Portfolio Code </label>
+    <select class="lead labelSize ">
+      <option value="" selected>--Select--</option>
+      <option *ngFor="let pf of portfoliocodes" value={{pf.value}}>{{pf.name}}</option>
+    </select>
+  <!--</div>-->
+  <!--<div class="row">-->
+    <label class="labelSize lead"> SegmentNumber </label>
+    <select class="lead  labelSize">
+      <option selected value="">--Select</option>
+      <option *ngFor="let _sn of segments" value="{{_sn.value}}">{{_sn.name}}</option>
+    </select>
+
+  <!--</div>-->
+  <!--<div class="row">-->
+    <!--<label class="lead labelSize"> Sort Column</label>-->
+    <!--<select class="lead labelSize ">-->
+      <!--<option selected value="">&#45;&#45;Select&#45;&#45;</option>-->
+      <!--<option value="fcmcode"> FCM Code</option>-->
+      <!--<option value="size"> Size </option>-->
+    <!--</select>-->
+  </div>
+
+  <div class="col-md-9">
+    <!--<app-my-grid-application></app-my-grid-application>-->
+    <!--&lt;!&ndash;<app-my-grid-application></app-my-grid-application>&ndash;&gt;-->
+  <!--</div>-->
+
+<!--=======-->
+  <!--</div>-->
+  <!--<div class="row">-->
+    <ag-grid-angular #agGrid style="width: 515px; height: 310px; font-size: 10px!important;" class="ag-fresh"
+                     [gridOptions]="gridOptions">
+    </ag-grid-angular>
+  </div>
+
+</div>
+</div>
